@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: EmployeeCRUDSpring
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Dhiviya
+Implementation-Vendor-Id: EmployeeCRUDSpring
+Build-Jdk: 1.8.0_144
+Implementation-URL: http://projects.spring.io/spring-boot/EmployeeCRUD
+ Spring/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
