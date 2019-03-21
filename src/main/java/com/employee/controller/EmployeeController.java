@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.employee.model.Employee;
@@ -44,6 +45,18 @@ public class EmployeeController {
 		}
 		return deletedEmp;
 	
+	}
+	@PostMapping({"/editemployee/{id}"})
+	public @ResponseBody Employee editEmployee(@PathVariable("id") int empid,@RequestBody Employee user){
+		for (Employee emp : employees) {
+			System.out.println(emp.getEmpId());
+			if (emp.getEmpId().equals(String.valueOf(empid))) {
+				employees.remove(emp);
+				employees.add(user);
+				break;
+			}
+		}
+		return user;
 	}
 
 	private static List<Employee> createList() {
